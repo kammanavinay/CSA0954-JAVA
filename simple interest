@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+class simple
+{
+	public static void main(String[]args)
+	{
+		int p,x;
+		float r,si;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter principal amount");
+		p= s.nextInt();
+		System.out.println("enter the no of years");
+		x=s.nextInt();
+		System.out.println("enter the interst");
+		r=s.nextFloat();
+		si = (p*x*r)/100;
+	 System.out.println(+si);
+	}
+}
