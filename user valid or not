@@ -1,0 +1,15 @@
+import java.util.*;
+class valid
+{
+	public static void main(String[]args)
+	{
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter the number");
+		String s1=S.nextLine();
+		String s2=S.nextLine();
+		if(s1 == s2)
+		 System.out.println("user name valid");
+		else
+		 System.out.println("user name Invalid");
+	}
+}
