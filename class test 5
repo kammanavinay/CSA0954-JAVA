@@ -1,0 +1,65 @@
+Q1
+    package test;
+
+import java.util.Scanner;
+class inverted
+{
+	public static void main (String[]args)
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n=s.nextInt();
+		for(int i=n;i>=1;i--)
+		{
+		 for(int j=0;j<n-i;j++)
+		 {
+		 System.out.print(" ");
+		 }
+		 for(int k=1;k<=i;k++)
+		 {
+		 System.out.print("*");
+		 }
+		 System.out.println("\n");
+		}
+
+	}
+}
+
+             
+   Q2:-
+             package test;
+
+import java.util.Scanner;
+
+class marks
+{
+	public static void main(String[]args)
+	{
+		int py,c,mat,phy,t;
+		float agg;
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the python");
+		py=s.nextInt();
+		System.out.println("enter the c program");
+		c=s.nextInt();
+		System.out.println("enter the maths");
+		mat=s.nextInt();
+		System.out.println("enter the physics");
+		phy=s.nextInt();
+		t=(py+c+mat+phy);
+		agg=(t/4);
+		System.out.print("total="+t);
+		System.out.print("aggrisive="+agg);
+		if(agg>75)
+		 System.out.println("DISTINCTION");
+		else if(agg>=60 && agg<75)
+		 System.out.println("First Division");
+		else if(agg>=50 && agg<60)
+		 System.out.println("Second Division");
+		else if(agg>=40 && agg<50)
+		 System.out.println("Third Division");
+		else 
+			System.out.println("Fail");
+	}
+}
+             
