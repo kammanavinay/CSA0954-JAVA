@@ -1,0 +1,49 @@
+Q1
+import java.util.*;
+class vow
+{
+	public static void main(String[]rgs)
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the sentance");
+		String name=s.nextLine();
+		int len=name.length();
+		char a[]=new char[len];
+		int vow=0;
+		for(int i=0;i<len;i++)
+		{
+		 a[i]=name.charAt(i);
+		 if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u' ||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U')
+		 vow=vow+1;
+		}
+		System.out.print(+vow);
+	}
+}
+
+Q2
+import java.util.*;
+class perfect
+{
+	public static void main(String[]args)
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n=s.nextInt();
+		int sum=0,temp=0;
+		for(int j=2;j<=1000;j++)
+		{
+		 if(n>temp)
+		 sum=1;
+		 for(int i=2;i<j;i++)
+		 {
+		 if(j%i==0)
+		 sum=sum+i;
+		 }
+		 if(sum==j)
+		 {
+		 System.out.print(j+" ");
+		 temp=temp+1;
+		 }
+		}
+		}
+		}
