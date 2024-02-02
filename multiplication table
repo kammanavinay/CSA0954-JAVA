@@ -1,0 +1,18 @@
+package day5;
+
+import java.util.*;
+class tables
+{
+	public static void main(String[]args)
+	{
+		int n,i;
+		Scanner s=new Scanner(System.in);
+		System.out.println("entr the table");
+		n=s.nextInt();
+		for(i=1;i<=n;i++)
+		{
+			System.out.println(i+"x"+n+"="+(i*n));
+		}
+		System.out.println( );
+	}
+}
