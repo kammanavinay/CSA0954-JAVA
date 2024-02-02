@@ -1,0 +1,22 @@
+package day5;
+
+import java.util.*;
+class fabinocci
+{
+	public static void main(String[]args)
+	{
+	int n,a1,a2,a3,i;
+	Scanner input=new Scanner(System.in);
+	System.out.println("enter the number");
+	 n=input.nextInt();
+	 a1=0;
+	 a2=1;
+	for(i=0;i<n;i++)
+	{
+	 System.out.print(a1+" ");
+	  a3=a1+a2;
+	 a1=a2;
+	 a2=a3;
+	}
+}
+}
