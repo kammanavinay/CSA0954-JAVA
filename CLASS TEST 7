@@ -1,0 +1,57 @@
+Q1
+import java.util.*; 
+ class array 
+{
+public static void main(String[] args) 
+{ 
+Scanner s=new Scanner(System.in); 
+int a[]=new int[] {1,2,8,3,2,2,2,5,1}; 
+int t[]=new int[a.length]; 
+int visited=-1; 
+for(int i=0;i<a.length;i++) 
+{ 
+int count=1; 
+for(int j=i+1;j<a.length;j++) 
+{ 
+if(a[i]==a[j]) 
+{ 
+count++; 
+t[j]=visited; 
+} 
+} 
+if(t[i]!=visited) 
+t[i]=count; 
+} 
+for(int i=0;i<a.length;i++) 
+{ 
+if(t[i]!=visited) 
+System.out.println(a[i]+"  "+t[i]); 
+} 
+} 
+}
+
+
+
+
+Q3
+import java.util.*;
+class names 
+{
+	public static void main(String[] args)
+	{ 
+		 Scanner input = new Scanner(System.in);
+		  System.out.println("Enter the String: ");
+		   String name = input.nextLine();
+      		  String[] n = name.split(" ");
+		        if (n.length > 0) {
+		            String l = n[n.length - 1];
+		            int len = l.length();
+		            System.out.println("Length of the last word: " + len);
+		        } else
+		        { 
+		            System.out.println("No words entered.");
+		        }
+		        input.close() ;
+	}
+		}
+
