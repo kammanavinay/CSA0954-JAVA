@@ -1,0 +1,231 @@
+Q1
+package model;
+
+import java.util.*;
+class mul
+{
+	public static void main(String[]args)
+	{
+		int r,c,i,j;
+		Scanner  s=new Scanner(System.in);
+		System.out.println("enter the no of rows");
+		r=s.nextInt();
+		System.out.println("enter the no of columns");
+		c=s.nextInt();
+		int a[][]=new int[r][c];
+		for( i=0;i<r;i++)
+		{
+		 for( j=0;j<c;j++)
+		 {
+		 a[i][j]=s.nextInt();
+		 }
+		}
+		for( i=0;i<r;i++)
+		{
+		 for(j=0;j<c;j++)
+		 {
+		 a[i][j]=s.nextInt();
+		 }
+		}
+		
+	int sum[][]=new int[r][c];
+	for( i=0;i<r;i++)
+	{
+	 for(j=0;j<c;j++)
+	 {
+	 sum[i][j]=0;
+	 for(int k=0;k<c;k++)
+	 {
+	 sum[i][j] = sum[i][j] +(a[i][k]*a[k][j]);
+	 }
+	 System.out.print(sum[i][j] + "\t");
+	 }
+	 System.out.println();
+}
+	}
+}
+
+
+  Q3
+
+package model;
+
+import java.util.*;
+ class word
+{
+ public static void main(String args[])
+ {
+ Scanner input=new Scanner(System.in);
+ System.out.println("enter the word");
+ String name=input.nextLine();
+ int len=name.length();
+ char arr[]=new char[len];
+ String Alpha;
+ for(int i=0;i<len;i++)
+ {
+ arr[i]=name.charAt(i);
+ }
+ Arrays.sort(arr);
+ for(int i=len-1;i>=0;i--)
+ {
+ System.out.print(arr[i]+" ");
+ }
+ }
+}
+
+
+    Q4
+
+    package model;
+import java.util.*;
+class vowel
+{
+	public static void main(String[]args)
+	{
+Scanner s=new Scanner(System.in);
+System.out.println("enter the word");
+String name=s.nextLine();
+int len=name.length();
+char a[]=new char[len];
+char vow[]=new char[len];
+char con[]=new char[len];
+int v=0,c=0;
+for(int i=0;i<len;i++)
+{
+ a[i]=name.charAt(i);
+ if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u'
+ ||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U') {
+ vow[v] = a[i];
+ v++;
+ }
+ else {
+ con[c] = a[i];
+ c++;
+ }
+}
+System.out.print("vowles: ");
+for(int i=0;i<v;i++)
+{
+ System.out.print(vow[i]);
+}
+System.out.print("\nconsonent: ");
+for(int j=0;j<c;j++)
+{
+ System.out.print(con[j]);
+}
+}
+}
+
+
+Q5  
+        
+        package model;
+import java.util.*;
+class composite
+{
+	public static void main(String[]args)
+	{
+Scanner s=new Scanner(System.in);
+int arr[]={16,18,27,16,23,21,19};
+int len=arr.length;
+int count=0;
+for(int i=0;i<len;i++)
+{
+ int c=0;
+ for(int j=1;j<100;j++)
+ {
+ if(arr[i]%j==0)
+ {
+ c++;
+ }
+ }
+ if(c>2)
+ count++;
+}
+System.out.println(+count);
+}
+}
+
+
+  Q6
+package model;
+
+import java.util.*;
+class pattern
+{
+	public static void mian(String[]args)
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n=s.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+			 for(int j=n;j>i;j--)
+			 {
+				 System.out.print(" ");
+			 }
+		 for(int k=1;k<=n;k++)
+		 {
+			 System.out.print("*");
+		 }
+		 System.out.println();
+		}		
+	}
+}
+
+
+Q7
+          package model;
+
+import java.util.Scanner;
+ class roman
+{
+ public static int value(char c)
+ {
+ if(c=='I')
+ return 1;
+ if(c=='V')
+ return 5;
+ if(c=='X')
+ return 10;
+ if(c=='L')
+ return 50;
+ if(c=='C')
+ return 100;
+ if(c=='D')
+ return 500;
+ if(c=='M')
+ return 1000;
+ return -1;
+ }
+ public static int romantodecimal(String str)
+ {
+ int res=0;
+ for(int i=0;i<str.length();i++)
+ {
+ int s1=value(str.charAt(i));
+ if(i+1<str.length())
+ {
+ int s2=value(str.charAt(i+1));
+ if(s1>=s2)
+ res=res+s1;
+ else
+ {
+ res=res+s2-s1;
+ i++;
+ }
+ }
+ else
+ res=res+s1;
+ }
+ return res;
+ }
+ public static void main(String[] args)
+ {
+ Scanner input=new Scanner(System.in);
+ System.out.println("enter the string");
+ String str=input.next();
+ System.out.println(romantodecimal(str));
+ }
+}
+        
